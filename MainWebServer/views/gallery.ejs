@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
 		<script  type= text/javascript src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 		<link href="https://rawgit.com/rvera/image-picker/master/image-picker/image-picker.css" rel="stylesheet">	
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">	
+		<script  type= text/javascript src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 		<script  type= text/javascript src="https://rawgit.com/rvera/image-picker/master/image-picker/image-picker.min.js" ></script>
 		<script type= text/javascript>
 		$(function() {
@@ -29,15 +31,17 @@
 <body>
 <h1>Galeria:</h1>    
 
-<form method="post" action="/rotate" onsubmit="onSubmit(event)">
-            <input type="hidden" name="files" id="fileNamesInput" />
-
-			<div class="col-sm-2">
-                    <button type="submit">Rotate</button>
-                </div>
-	
-            </div>
-</form>          
+<div class="container">
+		<form method="post" action="/rotate" onsubmit="onSubmit(event)">
+		<div class="col-md-3">
+				<input type="hidden" name="files" id="fileNamesInput" />
+				<input type="submit" class="btn  btn-primary btn-block" value="Obróć"/>
+		</div>     
+		<div class="col-md-3">
+			<input type="number" class="form-control" name="angle" max="270" min="90" step="90" value="90" />
+		</div>
+		</form>     
+</div>
 		                
 <select  multiple="multiple" class="image-picker show-html">
  <% files.forEach(function(file, i) { %>

@@ -7,14 +7,38 @@
 		<link href="https://rawgit.com/rvera/image-picker/master/image-picker/image-picker.css" rel="stylesheet">	
 		<script  type= text/javascript src="https://rawgit.com/rvera/image-picker/master/image-picker/image-picker.min.js" ></script>
 		<script type= text/javascript>
-		 $(function() {
-  $("select").imagepicker();
- });
+		$(function() {
+			$("select").imagepicker();
+		});
+		
+		function onSubmit(e) {
+			var srcs = [];
+			$.each($(".selected > img"), function(index, value){ 
+				srcs.push($(value).attr("src"));
+			});
+        
+            if (srcs.length === 0) {
+                e.preventDefault();
+                return;
+            }
+            document.getElementById('fileNamesInput').value = JSON.stringify(srcs);
+        }
 		</script>
     <title></title>
 </head>
 <body>
-<h1>Galeria:</h1>                    
+<h1>Galeria:</h1>    
+
+<form method="post" action="/rotate" onsubmit="onSubmit(event)">
+            <input type="hidden" name="files" id="fileNamesInput" />
+
+			<div class="col-sm-2">
+                    <button type="submit">Rotate</button>
+                </div>
+	
+            </div>
+</form>          
+		                
 <select  multiple="multiple" class="image-picker show-html">
  <% files.forEach(function(file, i) { %>
   <option data-img-src="<%= 'https://s3-us-west-2.amazonaws.com/' + bucket + '/' + file.Key %>" value=<%=file.Key%>> </option>

@@ -31,6 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="actions\createform.js" />
+    <Compile Include="actions\gallery.js" />
+    <Compile Include="actions\rotate.js" />
+    <Compile Include="actions\simpleDb.js" />
+    <Compile Include="actions\success.js" />
     <Compile Include="app.js" />
     <Compile Include="helpers.js" />
     <Compile Include="s3post.js" />
@@ -39,7 +43,9 @@
     <Content Include="package.json" />
     <Content Include="policy.json" />
     <Content Include="README.md" />
+    <Content Include="views\gallery.ejs" />
     <Content Include="views\index.ejs" />
+    <Content Include="views\success.ejs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="actions\" />

@@ -1,0 +1,12 @@
+{
+  "expiration": { "day": 1 },
+  "conditions": [
+    [ "starts-with", "$key", "stepniewski.arkadiusz/" ],
+    { "bucket": "stepniewski-lab4" },
+    { "x-amz-meta-name": "Arkadiusz Stepniewski" },
+    { "x-amz-meta-computer": "localhost" },
+    { "acl": "private" },
+    { "success_action_redirect": "http://google.pl" },
+    [ "content-length-range", 0, 1048576 ]
+  ]
+}

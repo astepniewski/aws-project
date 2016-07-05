@@ -15,7 +15,8 @@
 		function onSubmit(e) {
 			var srcs = [];
 			$.each($(".selected > img"), function(index, value){ 
-				srcs.push($(value).attr("src"));
+				var tmpSplit = $(value).attr("src").split('/');
+				srcs.push(tmpSplit[tmpSplit.length -2] + '/' + tmpSplit[tmpSplit.length - 1]);
 			});
         
             if (srcs.length === 0) {

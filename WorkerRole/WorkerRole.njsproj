@@ -30,17 +30,15 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="actions\s3digest.js" />
-    <Compile Include="actions\simpleDb.js" />
     <Compile Include="app.js" />
-    <Compile Include="helpers.js" />
+    <Compile Include="jobs\rotateJob.js" />
     <Content Include="actions.json" />
     <Content Include="config.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="actions\" />
+    <Folder Include="jobs\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />

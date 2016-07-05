@@ -13,6 +13,7 @@
     "ejs": "^1.0.0",
     "infinite-loop": "0.2.2",
     "moment": "^2.5.1",
-    "webs-weeia": "0.0.2"
+    "webs-weeia": "0.0.2",
+    "lwip": "0.0.9"
   }
 }

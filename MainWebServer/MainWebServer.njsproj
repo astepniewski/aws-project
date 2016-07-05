@@ -45,6 +45,7 @@
     <Content Include="README.md" />
     <Content Include="views\gallery.ejs" />
     <Content Include="views\index.ejs" />
+    <Content Include="views\sent.ejs" />
     <Content Include="views\success.ejs" />
   </ItemGroup>
   <ItemGroup>

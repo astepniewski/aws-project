@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+		<script  type= text/javascript src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<link href="https://rawgit.com/rvera/image-picker/master/image-picker/image-picker.css" rel="stylesheet">	
+		<script  type= text/javascript src="https://rawgit.com/rvera/image-picker/master/image-picker/image-picker.min.js" ></script>
+		<script type= text/javascript>
+		 $(function() {
+  $("select").imagepicker();
+ });
+		</script>
+    <title></title>
+</head>
+<body>
+<h1>Galeria:</h1>                    
+<select  multiple="multiple" class="image-picker show-html">
+ <% files.forEach(function(file, i) { %>
+  <option data-img-src="<%= 'https://s3-us-west-2.amazonaws.com/' + bucket + '/' + file.Key %>" value=<%=file.Key%>> </option>
+     <% }); %>
+</select>
+</body>
+</html>

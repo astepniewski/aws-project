@@ -1,5 +1,6 @@
 node_modules
 config.json
+.ntvs_analysis.dat
 # Download this file using PowerShell v3 under Windows with the following comand
 # Invoke-WebRequest https://gist.githubusercontent.com/kmorcinek/2710267/raw/ -OutFile .gitignore
 

@@ -6,7 +6,7 @@
     { "x-amz-meta-name": "Arkadiusz Stepniewski" },
     { "x-amz-meta-computer": "localhost" },
     { "acl": "private" },
-    { "success_action_redirect": "http://google.pl" },
+    { "success_action_redirect": "http://localhost:8080/success" },
     [ "content-length-range", 0, 1048576 ]
   ]
 }
